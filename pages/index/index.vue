@@ -8,7 +8,27 @@
 			
 			</swiper>
 		</view>
-	
+	     
+		 <view class="notice">
+			 <view class="left">
+				 <uni-icons type="sound-filled" size="20" color="#28b389"></uni-icons>
+				 <text class="text">公告</text>
+
+			 </view>
+			  <view class="conter">
+				  <swiper vertical autoplay interval="1500" duration="300" circular>
+					  <swiper-item v-for="item in 4">文本内容文本内容文本内容文本内容文本内容</swiper-item>
+				
+					
+				  </swiper>
+			  </view>
+			 <view class="right">
+				 <uni-icons type="right" size="16" color="#28b389"></uni-icons>
+
+			 </view>
+			
+		 	
+		 </view>
 		
 	</view>
 </template>
@@ -41,6 +61,53 @@
 			}
 			
 		}
+	
+	.notice {
+		 width: 690rpx;
+		 height: 80rpx;
+		 line-height: 80rpx;
+		 background-color: #f9f9f9;
+		
+		 margin: 0 auto;
+		 border-radius: 80rpx;
+		 display: flex;
+		 .left {
+			 width: 140rpx;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+			 
+			 .text {
+				 color: #28b389;
+				 font-weight: 600;
+				 font-size: 28rpx;
+			 }
+			 
+		 }
+		 .conter {
+			  flex: 1;
+			  
+			  swiper {
+				  width: 100%;
+				  height: 100%;
+				  
+				  &-item {
+					  height: 100%;
+					  font-size: 30rpx;
+					  color: #666;
+					  overflow: hidden;
+					  white-space: onwrap;
+					  text-overflow: ellipsis;
+				  }
+			  }
+		 }
+		 .right {
+			width:  70rpx ;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		 }
+	}
 	}
 	
 </style>
