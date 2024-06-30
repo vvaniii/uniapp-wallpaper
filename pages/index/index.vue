@@ -61,6 +61,9 @@
 			</common-title>
 		</view>
 		
+		<view class="content">
+			<theme-item v-for="item in 9"></theme-item>
+		</view>
 	</view>
 </template>
 
@@ -186,6 +189,13 @@
 			color: #888;
 			
 		}
+	}
+	.content {
+		margin-top: 30rpx;
+		padding: 0 30rpx;
+		display: grid;
+		gap: 15rpx;
+		grid-template-columns: repeat(3,1fr);
 	}
 	}
 	
