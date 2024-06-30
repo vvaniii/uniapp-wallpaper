@@ -1,6 +1,5 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
-const _sfc_main = {};
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   _easycom_uni_icons2();
@@ -9,41 +8,66 @@ const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-ico
 if (!Math) {
   _easycom_uni_icons();
 }
-function _sfc_render(_ctx, _cache) {
-  return {
-    a: common_vendor.f(3, (item, index, i0) => {
+const _sfc_main = {
+  __name: "user",
+  setup(__props) {
+    const clickGoClasslist = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/classlist/classlist"
+      });
+    };
+    return (_ctx, _cache) => {
       return {
-        a: "0f7520f0-0-" + i0,
-        b: "0f7520f0-1-" + i0
+        a: common_vendor.p({
+          type: "download-filled",
+          size: "20"
+        }),
+        b: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        c: common_vendor.o(clickGoClasslist),
+        d: common_vendor.p({
+          type: "star-filled",
+          size: "20"
+        }),
+        e: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        f: common_vendor.o(clickGoClasslist),
+        g: common_vendor.p({
+          type: "chatboxes-filled",
+          size: "20"
+        }),
+        h: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        i: common_vendor.p({
+          type: "notification-filled",
+          size: "20"
+        }),
+        j: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        k: common_vendor.p({
+          type: "flag-filled",
+          size: "20"
+        }),
+        l: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        })
       };
-    }),
-    b: common_vendor.p({
-      type: "download-filled",
-      size: "20",
-      color: "#28b389"
-    }),
-    c: common_vendor.p({
-      type: "right",
-      size: "15",
-      color: "#aaa"
-    }),
-    d: common_vendor.f(2, (item, index, i0) => {
-      return {
-        a: "0f7520f0-2-" + i0,
-        b: "0f7520f0-3-" + i0
-      };
-    }),
-    e: common_vendor.p({
-      type: "download-filled",
-      size: "20",
-      color: "#28b389"
-    }),
-    f: common_vendor.p({
-      type: "right",
-      size: "15",
-      color: "#aaa"
-    })
-  };
-}
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-0f7520f0"], ["__file", "C:/Users/wei/Desktop/WEB/uniappVue3/wallpaper/pages/user/user.vue"]]);
+    };
+  }
+};
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-0f7520f0"], ["__file", "C:/Users/wei/Desktop/WEB/uniappVue3/wallpaper/pages/user/user.vue"]]);
 wx.createPage(MiniProgramPage);
