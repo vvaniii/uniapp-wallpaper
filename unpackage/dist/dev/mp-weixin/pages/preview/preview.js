@@ -18,6 +18,8 @@ const _sfc_main = {
   setup(__props) {
     const maskState = common_vendor.ref(true);
     const infoPopup = common_vendor.ref(null);
+    const scorePopup = common_vendor.ref(null);
+    const userScore = common_vendor.ref(0);
     const maskChange = () => {
       maskState.value = !maskState.value;
     };
@@ -26,6 +28,16 @@ const _sfc_main = {
     };
     const clickInfoClose = () => {
       infoPopup.value.close();
+    };
+    const clickScore = () => {
+      scorePopup.value.open();
+    };
+    const clickScoreClose = () => {
+      scorePopup.value.close();
+    };
+    const submitScore = () => {
+      console.log("确认评分");
+      scorePopup.value.close();
     };
     return (_ctx, _cache) => {
       return {
@@ -51,31 +63,52 @@ const _sfc_main = {
           type: "star",
           size: "28"
         }),
-        i: common_vendor.p({
+        i: common_vendor.o(clickScore),
+        j: common_vendor.p({
           type: "download",
           size: "23"
         }),
-        j: maskState.value,
-        k: common_vendor.p({
+        k: maskState.value,
+        l: common_vendor.p({
           type: "closeempty",
           size: "18",
           color: "999"
         }),
-        l: common_vendor.o(clickInfoClose),
-        m: common_vendor.p({
+        m: common_vendor.o(clickInfoClose),
+        n: common_vendor.p({
           readonly: true,
           touchable: true,
           value: "3.5",
           size: "16"
         }),
-        n: common_vendor.f(3, (item, k0, i0) => {
+        o: common_vendor.f(3, (item, k0, i0) => {
           return {};
         }),
-        o: common_vendor.sr(infoPopup, "2dad6c07-5", {
+        p: common_vendor.sr(infoPopup, "2dad6c07-5", {
           "k": "infoPopup"
         }),
-        p: common_vendor.p({
+        q: common_vendor.p({
           type: "bottom"
+        }),
+        r: common_vendor.p({
+          type: "closeempty",
+          size: "18",
+          color: "999"
+        }),
+        s: common_vendor.o(clickScoreClose),
+        t: common_vendor.o(($event) => userScore.value = $event),
+        v: common_vendor.p({
+          allowHalf: true,
+          modelValue: userScore.value
+        }),
+        w: common_vendor.t(userScore.value),
+        x: !userScore.value,
+        y: common_vendor.o(submitScore),
+        z: common_vendor.sr(scorePopup, "2dad6c07-8", {
+          "k": "scorePopup"
+        }),
+        A: common_vendor.p({
+          ["is-mask-click"]: false
         })
       };
     };
